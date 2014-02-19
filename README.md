@@ -2,6 +2,20 @@
 
 Unofficial API Wrapper for Linkbucks.com
 
+## Installation
+
+To use this rubygem:
+
+```
+$ sudo gem install linkbucks
+```
+
+With bundler:
+
+```
+gem "linkbucks", "~> 0.0.2"
+```
+
 ## Some examples
   
 ```  
