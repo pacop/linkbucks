@@ -1,0 +1,24 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - jruby
+  - 2.0.0
+  - 2.1.0
+  - 1.9.3
+  - 1.9.2
+  - ruby-head
+  - jruby-18mode
+  - jruby-19mode
+  - jruby-head
+  - rbx-18mode
+  - rbx-19mode
+
+script: 'bundle exec rspec'
+
+notifications:
+  email:
+    recipients:
+      - pacoparu@gmail.com
+    on_failure: change
+    on_success: never

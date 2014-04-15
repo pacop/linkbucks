@@ -2,6 +2,8 @@
 
 Unofficial API Wrapper for Linkbucks.com
 
+[![Build Status](https://travis-ci.org/pacop/linkbucks.svg?branch=master)](https://travis-ci.org/pacop/linkbucks)
+
 ## Installation
 
 To use this rubygem:
