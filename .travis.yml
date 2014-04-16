@@ -8,11 +8,8 @@ rvm:
   - 1.9.3
   - 1.9.2
   - ruby-head
-  - jruby-18mode
   - jruby-19mode
   - jruby-head
-  - rbx-18mode
-  - rbx-19mode
 
 script: 'bundle exec rspec'
 
