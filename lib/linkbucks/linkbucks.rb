@@ -47,10 +47,10 @@ module Linkbucks
     # @raise [ArgumentError] Invalid parameters
     # @raise [StandardError] Unknown error
     def create_link_single data
-      data[:adType] = AD_TYPE[data[:adType]] if data[:adType].is_a? Symbol
-      data[:contentType] = AD_TYPE[data[:contentType]] if data[:contentType].is_a? Symbol
+      data[:adType] = data[:adType].nil? ? AD_TYPE[:intermission] : AD_TYPE[data[:adType]]
+      data[:contentType] = data[:contentType].nil? ? CONTENT_TYPE[:clean] : CONTENT_TYPE[data[:contentType]]
       
-      data = {contentType: CONTENT_TYPE[:clean], adType: AD_TYPE[:intermission], domain: 'linkbucks.com'}.merge(data)
+      data = {contentType: data[:contentType], adType: data[:adType], domain: 'linkbucks.com'}.merge(data)
 
       body = https_post URL_API, {user: @user, apiPassword: @pass}.merge(data)
       body = JSON.parse body  
